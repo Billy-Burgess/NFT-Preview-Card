@@ -25,16 +25,43 @@ body {
     max-width: 20rem;
     margin: 9.5rem auto;
     border-radius: 15px;
-    padding: 1.5rem 1.6rem 2rem;
+    padding: 1.563rem 1.6rem 2rem;
 }
 
+
 .main-img {
+    position: relative;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: auto;
+    height: auto;
+}
+
+.eth-img {
     width: 100%;
-    border-radius: 10px;
+    height: 100%;
+    border-radius: 8px;
+}
+
+.main-img:hover {
+    cursor: pointer;
+}
+
+.main-img:hover .main-img-overlay {
+    opacity: 1;
+}
+
+.main-img-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    background-color: hsla(178, 100%, 50%, 0.5);
+    border-radius: 8px;
 }
 
 .card-title {
@@ -44,21 +71,25 @@ body {
     padding: 1.25rem 0;
 }
 
+.card-title:hover {
+    cursor: pointer;
+    color: var(--eth-text);
+}
+
 .card-p {
     color: var(--p-text);
     font-weight: 300;
     font-family: 'Outfit', sans-serif;
     padding-bottom: 1.25rem;
+    font-size: 1.125rem;
 }
 
 .info {
     padding-bottom: 1.25rem;
     display: flex;
-    /* justify-content: space-between; */
     align-items: center;
     border-bottom: 1px solid var(--line);
     font-family: 'Outfit', sans-serif;
-    ;
 }
 
 .eth-amount {
@@ -76,4 +107,47 @@ body {
 
 .clock-icon {
     padding-right: .5rem;
+}
+
+.creator {
+    padding-top: 1.25rem;
+    color: var(--p-text);
+    display: flex;
+    align-items: center;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 300;
+}
+
+.avatar {
+    width: 2rem;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-right: 1rem;
+}
+
+.creation-of {
+    padding-right: .4rem;
+}
+
+.name {
+    color: var(--title);
+}
+
+.name:hover {
+    color: cyan;
+    cursor: pointer;
+}
+
+.attribution {
+    color: white;
+    padding-bottom: 0.3rem;
+}
+
+.attribution a {
+    color: white;
+    text-decoration: none;
+}
+
+.attribution a:hover {
+    color: cyan;
 }
